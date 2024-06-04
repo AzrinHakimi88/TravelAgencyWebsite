@@ -1,0 +1,60 @@
+*,body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    height: calc(100vh - 80px);
+    width: 100vw;
+    overflow: hidden;
+}
+.collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.collage div {
+    position: relative;
+}
+.collage div:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.collage div:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.collage div:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.collage div:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.dest-card:hover {
+    top: -5px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.28);
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("https://images.unsplash.com/photo-1510272839903-5112a2e44bc6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
