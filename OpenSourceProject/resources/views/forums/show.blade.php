@@ -14,11 +14,7 @@
                     @if (auth()->id() == $comment->user->id)
                     <div class="flex gap-8 justify-end my-4">
                         <a href="{{route('comment.update', $comment->id)}}"><img src="/pen.png" alt="Edit"></a>
-                        <form method="POST" action="{{route('comment.delete', $comment->id)}}">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit"><img src="/bin.png" alt="Delete"></button>
-                        </form>                 
+                        <button onclick="showDeleteModal({{ $comment->id }})"><img src="/bin.png" alt="Delete"></button>              
                     </div>
                     @endif
                 </div>
@@ -32,4 +28,32 @@
         @endauth
         </div>
     </div>
+
+    <div id="deleteModal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+                <h2 class="text-xl font-semibold mb-4">Confirm Deletion</h2>
+                <p class="mb-4">Are you sure you want to delete this comment?</p>
+                <div class="flex justify-end">
+                    <button onclick="hideDeleteModal()" class="btn bg-gray-500 mr-3 p-2 text-white">Cancel</button>
+                    <form id="deleteForm" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn bg-red-500 p-2 text-white">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDeleteModal(enquiryId) {
+            document.getElementById('deleteForm').action = `/comment/${enquiryId}`;
+            document.getElementById('deleteModal').classList.remove('hidden');
+        }
+
+        function hideDeleteModal() {
+            document.getElementById('deleteModal').classList.add('hidden');
+        }
+    </script>
 </x-layout>
