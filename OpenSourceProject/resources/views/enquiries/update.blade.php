@@ -1,7 +1,4 @@
-<!-- resources/views/enquiries/update.blade.php -->
-<!-- resources/views/enquiries/update.blade.php -->
-
-<x-layout>
+<x-layout :pageTitle="Edit Enquiry">
     <div class="container mx-auto mt-8 p-4">
         <h1 class="text-3xl font-bold mb-6">Update Enquiry</h1>
 

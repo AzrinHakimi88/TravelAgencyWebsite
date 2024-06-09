@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :pageTitle="$destination->destination">
     <div class="relative xl:px-12 py-8 ">
         <div class="md:flex m-4">
             <div class="md:w-1/2 rounded-xl overflow-hidden">

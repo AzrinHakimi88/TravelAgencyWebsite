@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :pageTitle="'Edit Comment'">
     <div class="xl:mx-[15%] mt-8 p-4">
         <div class="bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-bold mb-4">Edit Comment</h2>

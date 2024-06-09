@@ -1,4 +1,4 @@
-<x-layout> 
+<x-layout :pageTitle="'Destination'"> 
     <div class="bg-slate-200">
         <div class="relative h-[40vh] overflow-hidden">
             <div class="w-full h-full">
@@ -11,19 +11,20 @@
     
         <div>
             
-            {{-- read and render destination from database --}}
             <div class="flex flex-col gap-8 my-8 items-center">
                <ul class="relative list-none flex flex-col gap-8 my-8 items-center xl:w-[70%] md:w-[90%] w-full">
-                @forelse ($destinations as $dest)
-                    <x-destination-list
-                    :route="route('dest.show', $dest)"
-                    :image="$dest->imageUrl"
-                    :name="$dest->destination"
-                    :description="$dest->description"
-                    />
-                @empty
+                @if (isset($destinations) && count($destinations) > 0)
+                    @foreach ($destinations as $dest)
+                        <x-destination-list
+                        :route="route('dest.show', $dest)"
+                        :image="$dest->imageUrl"
+                        :name="$dest->destination"
+                        :description="$dest->description"
+                        />
+                    @endforeach
+                @else
                     <li>No destinations found.</li>
-                @endforelse
+                @endif
                 </ul> 
             </div>
         </div>

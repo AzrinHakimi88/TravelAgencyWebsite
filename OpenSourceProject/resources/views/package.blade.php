@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :pageTitle="'Package'">
     <div class="xl:mx-[10%] flex justify-center">
         <div class="flex flex-wrap gap-8 justify-center xl:justify-start my-8">
             @foreach ($packages as $package)

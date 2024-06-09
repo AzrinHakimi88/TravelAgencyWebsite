@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :pageTitle="'Forum'">
     <div class="xl:mx-[15%] mt-8 p-4">
         <h1 class="text-3xl font-bold mb-6">{{ $topic->title }}</h1>
         <div class="bg-white p-6 rounded-lg shadow-md mb-6">

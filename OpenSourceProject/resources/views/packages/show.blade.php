@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :pageTitle="$package->name">
     <div class="">
         @php
             $images = json_decode($package->image_gallery, true);
@@ -34,7 +34,7 @@
                     </div>
                 </div>
 
-                <!-- Itinerary -->
+             
                 <div class="mt-8">
                     <h2 class="text-3xl font-semibold mb-4">Itinerary</h2>
                     <div class="space-y-4">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
 
-                <!-- Additional Information -->
+                
             <div class="mt-8">
                 <h2 class="text-3xl font-semibold mb-4">Additional Information</h2>
                 <div class="space-y-4">
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-                <!-- Additional Images Gallery -->
+                
                 @if(count($images) > 0)
                     <h2 class="text-3xl font-semibold mt-8 mb-4">Gallery</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">

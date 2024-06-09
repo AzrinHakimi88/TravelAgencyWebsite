@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :pageTitle="'Authentication'">
     <div class="relative">
 
         <x-banner></x-banner>
