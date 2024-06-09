@@ -2,7 +2,7 @@
     <div>
         <div class="relative overflow-hidden h-[500px] bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1519354754184-e1d9c46182c0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
             <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Optional overlay for better text contrast -->
-            <div class="relative z-10 flex items-center justify-center h-full">
+            <div class="relative flex items-center justify-center h-full">
                 <h1 class="text-white text-8xl font-bold text-center">Travel Forum</h1>
             </div>
         </div>
@@ -28,7 +28,7 @@
 
         <!-- Popup Form for Creating a New Topic -->
         <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center">
-            <div class="bg-white p-6 rounded-lg shadow-md w-1/2">
+            <div class="bg-white p-6 rounded-lg shadow-md w-1/2 ">
                 <h2 class="text-2xl font-bold mb-4">Create New Topic</h2>
                 <form action="{{ route('forum.store') }}" method="POST">
                     @csrf

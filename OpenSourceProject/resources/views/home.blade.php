@@ -1,6 +1,7 @@
 <x-layout>
     <x-banner>
         Discover New Worlds
+        <p class="text-2xl">Adventure Awaits on the Horizon</p>
     </x-banner>
 
 

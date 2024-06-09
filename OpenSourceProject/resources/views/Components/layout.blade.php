@@ -62,8 +62,8 @@
 
         {{$slot}}
 
-        <footer class="h-[80px] flex justify-center items-center gap-8 bg-slate-100">
-            this is footer
+        <footer class="h-[80px] flex justify-center items-center gap-8 bg-slate-100 shadow-inner">
+            WIE2002-Assignment 2024
         </footer>
     </div>
     
