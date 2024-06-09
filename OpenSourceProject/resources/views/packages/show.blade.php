@@ -7,7 +7,7 @@
             $exclusions = json_decode($package->exclusions, true);
         @endphp
 
-        <!-- Parallax Section -->
+   
         <div class="relative overflow-hidden h-96 bg-fixed bg-center bg-cover" style="background-image: url('{{ $images[0]}}');">
             <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Optional overlay for better text contrast -->
             <div class="relative z-10 flex items-center justify-center h-full">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="container mx-auto p-6">
-            <!-- Package Information -->
+           
             <div class="mt-8">
                 <h2 class="text-3xl font-semibold mb-4">Trip Details</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">

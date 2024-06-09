@@ -6,10 +6,8 @@
 
 
     <h1 class="text-4xl text-center my-8">Top Destinations</h1>
-    {{-- read and rendernder top destination from database --}}
     <div class="flex justify-center flex-wrap gap-8">
         
-        if(isset($destination) )
         @foreach ($destinations as $dest)
             <x-destination-card 
             :link="route('dest.show' , $dest)" 

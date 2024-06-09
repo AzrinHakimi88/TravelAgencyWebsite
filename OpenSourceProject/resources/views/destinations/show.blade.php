@@ -25,7 +25,7 @@
                             :price="$package->price"
                         />
                     @else
-                        <!-- Handle the case where image_gallery might be empty or not properly formatted -->
+            
                         <x-package-card 
                             :link="'#'" 
                             :image="'default-image-url.jpg'" <!-- Placeholder image -->

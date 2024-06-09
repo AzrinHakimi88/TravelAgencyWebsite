@@ -24,7 +24,7 @@
                 </form>
             </div>
 
-            <!-- Sign Up Form (initially hidden) -->
+    
             <div id="signup-form" class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm mx-auto hidden">
                 <h2 class="text-2xl font-bold mb-6 text-center">Sign Up</h2>
                 <form action="{{route('register')}}" method="POST">
